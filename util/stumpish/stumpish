@@ -20,6 +20,11 @@
 
 ### STUMPwm Interactive SHell.
 
+if [ "x$(pgrep -a sbcl | grep startstump)" = "x" ]
+then
+    exit 1
+fi
+
 DELAY=0.01
 
 if ! sleep $DELAY 2>/dev/null >&2
